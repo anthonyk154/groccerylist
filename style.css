@@ -1,0 +1,221 @@
+/* ----- RESET ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----- THEME VARIABLES ----- */
+:root {
+    --bg: #1c1b29;
+    --text: white;
+    --card: rgba(255,255,255,0.1);
+    --accent: #ff4df8;
+}
+
+.light {
+    --bg: #f7f7f7;
+    --text: #111;
+    --card: #e4e4e4;
+    --accent: #7534ff;
+}
+
+/* ----- BASE ----- */
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 20px;
+    max-width: 600px;
+    margin: auto; /* Perfect centering on large screens */
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+/* ----- THEME BUTTON ----- */
+.theme-btn {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    z-index: 999;
+    padding: 12px;
+    background: var(--card);
+    border-radius: 50%;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* ----- INPUT AREA ----- */
+.top-box {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 60px;
+}
+
+input,
+select,
+button {
+    padding: 14px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+}
+
+button {
+    background: var(--accent);
+    color: white;
+    font-weight: bold;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+/* ----- LIST ITEMS ----- */
+ul {
+    list-style: none;
+    margin-top: 25px;
+}
+
+li {
+    background: var(--card);
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+li.checked {
+    background: rgba(0,255,120,0.25);
+    text-decoration: line-through;
+}
+
+/* Checkbox */
+.checkbox {
+    width: 26px;
+    height: 26px;
+    border: 2px solid var(--text);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.checkbox.checked {
+    background: #3aff93;
+    border-color: #3aff93;
+}
+
+/* Row layout */
+.item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Smaller labels under item name */
+.category {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.price {
+    font-weight: bold;
+    margin-left: auto;
+}
+
+/* Delete button */
+.delete {
+    background: #ff3b3b;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+/* ----- PROGRESS BAR ----- */
+.progress-container {
+    margin-top: 20px;
+    height: 12px;
+    background: var(--card);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#progressBar {
+    height: 100%;
+    background: #3aff93;
+    width: 0%;
+}
+
+.progress-text {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* ----- BOTTOM BUTTONS ----- */
+.bottom-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.share {
+    background: #00d0ff;
+}
+
+.clear {
+    background: #ff3b3b;
+}
+
+/* ----- MOBILE FIRST OPTIMIZATION ----- */
+@media (min-width: 480px) {
+    .item-row {
+        flex-direction: row;
+    }
+}
+
+/* ----- SUPER MOBILE-FRIENDLY OPTIMIZATION ----- */
+@media (max-width: 390px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+    button,
+    input,
+    select {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+}
+.brand-link {
+    display: block;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: bold;
+    opacity: 0.9;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.brand-link:hover {
+    opacity: 1;
+    text-shadow: 0 0 8px var(--accent);
+    transform: scale(1.03);
+}
+.brand-link strong{
+      text-decoration: underline;
+      cursor: pointer;
+}

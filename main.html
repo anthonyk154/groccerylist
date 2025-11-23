@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery List Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+</head>
+<body>
+
+<h1>🛒 Grocery List Pro</h1>
+
+<a href="https://anthonyswebsites.site" class="brand-link" target="_blank">
+    Made by <strong>AnthonysWebsites</strong>
+</a>
+
+
+<div class="top-box">
+    <input type="text" id="itemInput" placeholder="Add item...">
+    <input type="number" id="priceInput" placeholder="Price $" min="0" step="0.01">
+    <select id="categoryInput">
+        <option>General</option>
+        <option>Fridge</option>
+        <option>Freezer</option>
+        <option>Snacks</option>
+        <option>Drinks</option>
+        <option>Produce</option>
+        <option>Household</option>
+    </select>
+    <button id="addBtn">Add</button>
+</div>
+
+<div class="progress-container">
+    <div id="progressBar"></div>
+</div>
+<p id="progressText" class="progress-text">0/0 completed</p>
+
+<h3>Total Cost: $<span id="totalCost">0.00</span></h3>
+
+<ul id="groceryList" class="sortable"></ul>
+
+<div class="bottom-buttons">
+    <button id="shareBtn" class="share">Share List</button>
+    <button id="clearBtn" class="clear">Clear</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
